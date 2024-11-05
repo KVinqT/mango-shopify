@@ -1,0 +1,63 @@
+.mainContainer {
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+}
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  gap: 120px;
+}
+.imageContainer {
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.image {
+  width: 150px;
+  height: 170px;
+  cursor: pointer;
+  animation: shake 3s ease-in-out infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(-20deg);
+  }
+  20% {
+    transform: rotate(20deg);
+  }
+  30% {
+    transform: rotate(-20deg);
+  }
+  40% {
+    transform: rotate(20deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  /* Idle state for 2 seconds */
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.header {
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+}
+
+.logoFont {
+  font-family: "Jost", sans-serif;
+  font-weight: 800;
+  font-size: 25px;
+  font-style: italic;
+}
