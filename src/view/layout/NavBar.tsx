@@ -45,6 +45,7 @@ const NavBar = () => {
       position="static"
       sx={{
         backgroundColor: "white",
+        boxShadow: 2,
       }}
     >
       <Container maxWidth="xl">
@@ -107,6 +108,7 @@ const NavBar = () => {
                 key={page}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: "#F9AF22", display: "block" }}
+                variant="outlined"
               >
                 {page}
               </Button>
