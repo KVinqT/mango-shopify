@@ -47,6 +47,10 @@ let theme = createTheme({
         root: {
           backgroundColor: Colors.soft,
         },
+        //testing --> if i give the 'variant="filled"' props to the select component the below css will work
+        filled: {
+          backgroundColor: "black",
+        },
       },
     },
   },
