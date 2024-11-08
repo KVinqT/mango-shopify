@@ -42,10 +42,11 @@ const NavBar = () => {
 
   return (
     <AppBar
-      position="static"
+      position="fixed"
       sx={{
-        backgroundColor: "white",
         boxShadow: 2,
+        backdropFilter: "blur(5px)",
+        backgroundColor: "rgba(255, 255, 255, 0.6)",
       }}
     >
       <Container maxWidth="xl">

@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import * as Layout from "../../view/layout";
 import { Box, Tab, Tabs } from "@mui/material";
 import CategorySelector from "./components/CategorySelector";
-import FavoriteIcon from "@mui/icons-material/Favorite";
 import TabContent from "./components/TabContent";
+import FavoriteIcon from "@mui/icons-material/Favorite";
 
 const Products = () => {
   const [value, setValue] = React.useState<number>(0);
@@ -24,7 +24,7 @@ const Products = () => {
   return (
     <Box>
       <Layout.NavBar />
-      <Box sx={{ height: "100vh" }}>
+      <Box sx={{ height: "100vh", marginTop: 9 }}>
         <Box
           sx={{
             display: "flex",
