@@ -62,7 +62,7 @@ const Products = () => {
             <CategorySelector />
           </Box>
         </Box>
-        <Box sx={{ width: "95%", margin: "auto", marginTop: 5 }}>
+        <Box sx={{ width: "80%", margin: "auto" }}>
           {/* actual products (content) of the selected tab */}
           <TabContent selectedTab={value} index={0} />
           <TabContent selectedTab={value} index={1} />
