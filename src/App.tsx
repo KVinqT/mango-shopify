@@ -7,7 +7,7 @@ function App() {
     <div className="mainContainer">
       <div className="contentContainer">
         <div className="imageContainer">
-          <Link to="/login">
+          <Link to="/products">
             <img src={staticImages.logoImage} alt="" className="image" />
           </Link>
           <h2 className="logoFont">MANGO SHOPIFY</h2>

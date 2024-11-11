@@ -13,6 +13,7 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import staticImages from "../../images";
 import { LogoImage } from "../../utils";
+import { Link } from "react-router-dom";
 
 const pages = ["Saved Item", "Order History", "Shopping Cart"];
 const settings = ["Profile", "Logout"];
@@ -94,7 +95,9 @@ const NavBar = () => {
           </Box>
           <Box sx={{ flexGrow: { xs: 1, md: 0 }, backgroundColor: "white" }}>
             {" "}
-            <LogoImage src={staticImages.logoImage} className />
+            <Link to="/">
+              <LogoImage src={staticImages.logoImage} className />
+            </Link>
           </Box>
           <Box
             sx={{

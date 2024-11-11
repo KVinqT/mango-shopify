@@ -23,7 +23,7 @@ const Products = () => {
   return (
     <Box>
       <Layout.NavBar />
-      <Box sx={{ height: "100vh", marginTop: 9 }}>
+      <Box sx={{ height: "100%", marginTop: 9 }}>
         <Box
           sx={{
             display: "flex",
@@ -61,7 +61,7 @@ const Products = () => {
             <CategorySelector />
           </Box>
         </Box>
-        <Box sx={{ width: "80%", margin: "auto" }}>
+        <Box sx={{ width: "95%", margin: "auto", marginTop: "40px" }}>
           {/* actual products (content) of the selected tab */}
           <TabContent selectedTab={value} index={0} />
           {/* <TabContent selectedTab={value} index={1} /> */}

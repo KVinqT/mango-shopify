@@ -1,7 +1,6 @@
 .cardContainer {
   width: 250px;
-  height: 400px;
-  margin-top: 100px;
+  /* height: 400px; */
 }
 
 .imageAncestor {
@@ -17,4 +16,6 @@
 
 .textContainer {
   margin-top: 20px;
+  display: flex;
+  flex-direction: column;
 }

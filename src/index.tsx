@@ -38,9 +38,10 @@ const root = ReactDOM.createRoot(
 );
 
 root.render(
-  <React.StrictMode>
-    <ThemeProvider theme={theme}>
-      <RouterProvider router={router} />
-    </ThemeProvider>
-  </React.StrictMode>
+  // <React.StrictMode>
+
+  // </React.StrictMode>
+  <ThemeProvider theme={theme}>
+    <RouterProvider router={router} />
+  </ThemeProvider>
 );
