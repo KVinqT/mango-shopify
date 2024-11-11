@@ -8,7 +8,6 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 
 const Products = () => {
   const [value, setValue] = React.useState<number>(0);
-  console.log("Value: " + value);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
@@ -65,7 +64,7 @@ const Products = () => {
         <Box sx={{ width: "80%", margin: "auto" }}>
           {/* actual products (content) of the selected tab */}
           <TabContent selectedTab={value} index={0} />
-          <TabContent selectedTab={value} index={1} />
+          {/* <TabContent selectedTab={value} index={1} /> */}
         </Box>
       </Box>
     </Box>

@@ -1,6 +1,11 @@
 .cardContainer {
-  width: 300px;
+  width: 250px;
+  height: 400px;
   margin-top: 100px;
+}
+
+.imageAncestor {
+  height: 280px;
 }
 .imageAncestor:hover {
   cursor: pointer;
