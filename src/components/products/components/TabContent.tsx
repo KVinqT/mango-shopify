@@ -2,40 +2,50 @@ import { useEffect, useState } from "react";
 import ProductCard from "./ProductCard";
 import { Box, Typography } from "@mui/material";
 import { IProduct } from "../../../model";
+import { getAllProducts } from "../../../utils";
 
 interface TabContentProps {
   selectedTab: number;
-  index: number;
 }
 const TabContent = (props: TabContentProps) => {
-  const { selectedTab, index } = props;
+  const { selectedTab } = props;
   const [products, setProducts] = useState<IProduct[]>([]);
   const [categories, setCategories] = useState<string[]>([]);
+  console.log("TabContent render");
+
   useEffect(() => {
     console.log("Inside use effect");
     // network request side effects
     const fetchProducts = async () => {
       try {
-        const response = await fetch("https://fakestoreapi.com/products");
-        const data: IProduct[] = (await response.json()) as IProduct[];
-        const filteredCategories: string[] = [];
-        for (let i = 0; i <= data.length - 1; i++) {
-          console.log("Enter for loop");
-          if (!filteredCategories.includes(data[i].category)) {
-            filteredCategories.push(data[i].category);
+        if (selectedTab === 0) {
+          const data = await getAllProducts();
+          const filteredCategories: string[] = [];
+          //I know that insetad of nested filtering, we can make another simple request to the categories API
+          for (let i = 0; i <= data.length - 1; i++) {
+            if (!filteredCategories.includes(data[i].category)) {
+              filteredCategories.push(data[i].category);
+            }
           }
+          setCategories(filteredCategories);
+          setProducts(data);
+        } else if (selectedTab === 1) {
+          const data = await getAllProducts();
+          setProducts(data);
         }
-        setCategories(filteredCategories);
-        setProducts(data);
       } catch (error) {
         console.log("Error is --> ", error);
       }
     };
     fetchProducts();
   }, []);
-
+  if (selectedTab === 1) {
+    products.map((product) => {
+      return <ProductCard key={product.id} {...product} />;
+    });
+  }
   return (
-    <div hidden={selectedTab !== index}>
+    <div>
       {categories.map((c) => {
         return (
           <Box

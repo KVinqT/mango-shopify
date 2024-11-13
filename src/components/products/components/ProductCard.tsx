@@ -18,16 +18,7 @@ const ProductCard = (props: IProduct) => {
               marginTop: 2,
             }}
           >
-            {String(props.price)}
-          </Typography>
-          {/* short description */}
-          <Typography
-            fontSize={14}
-            sx={{
-              marginTop: 1,
-            }}
-          >
-            {props.description}
+            ${String(props.price)}
           </Typography>
         </div>
       </div>
